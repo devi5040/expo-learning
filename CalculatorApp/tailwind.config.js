@@ -1,13 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    // Ensure this points to your source code
-    './app/**/*.{js,tsx,ts,jsx}',
-    // If you use a `src` directory, add: './src/**/*.{js,tsx,ts,jsx}'
-    // Do the same with `components`, `hooks`, `styles`, or any other top-level directories
-  ],
+  // NOTE: Update this to include the paths to all of your component files.
+  content: ['./app/**/*.{js,jsx,ts,tsx}', './*.js'],
+  presets: [require ('nativewind/preset')],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: '#28282b',
+        'btn-green': '#4eccbc',
+        'btn-red': '#be6e75',
+      },
+    },
   },
   plugins: [],
 };
